@@ -1,0 +1,37 @@
+Coefficient of   x^14                     = 1
+Coefficient of   x^6 * y^3 * z^1         = 1
+Coefficient of   x^4 * y^2 * z^1 * w^1   = 1
+Coefficient of   x^3 * y^2 * z^3         = 1
+Coefficient of   x^2 * y^1 * z^1 * w^2   = 1
+Coefficient of   x^1 * y^7               = 1
+Coefficient of   x^1 * y^1 * z^3 * w^1   = 1
+Coefficient of   y^1 * z^5               = 1
+Coefficient of   z^1 * w^3               = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+Allocate G_len 80 elements and old = 40.
+Allocate M_len = 800 elements.
+Allocate M_len = 1600 elements.
+Allocate G_len 160 elements and old = 80.
+Allocate M_len = 3200 elements.
+1 0 0 0 0 1 0 1 1   10
+1 1 0 0 0 1 0 1 1   22
+1 0 1 0 0 1 0 1 1   32
+1 1 1 0 0 1 0 1 1   45
+1 0 0 0 1 1 0 1 1   24
+1 1 0 0 1 1 0 1 1   31
+1 0 1 0 1 1 0 1 1   42
+1 1 1 0 1 1 0 1 1   43
+1 0 0 0 0 1 1 1 1   24
+1 0 1 0 0 1 1 1 1   53
+1 1 1 0 0 1 1 1 1   57
+1 0 0 1 0 1 1 1 1   54
+1 1 0 1 0 1 1 1 1   71
+1 1 1 1 0 1 1 1 1   86
+1 1 0 0 1 1 1 1 1   70
+1 0 1 0 1 1 1 1 1   77
+1 1 1 0 1 1 1 1 1   59
+1 0 0 1 1 1 1 1 1   44
+1 1 0 1 1 1 1 1 1   73
+1 1 1 1 1 1 1 1 1   59
