@@ -250,3 +250,9 @@ This matrix times 2^(-4) should be the matrix of frobenius.
 */ 
 B = 2^(-4) * A; 
 /* Freed 2897 lists. */
+The sign is: 1
+The characteristic polynomial is: x^8 + x^7 - 12*x^4 + 64*x + 256
+Its Newton polygon is: [2, 4/3, 4/3, 4/3, 2/3, 2/3, 2/3, 0]
+Its factorization is: Mat([x^8 + x^7 - 12*x^4 + 64*x + 256, 1])
+The valuation of f-g is: 30
+The valuation of subst(g,x,A) is: 28

@@ -218,3 +218,9 @@ This matrix times 2^(-1) should be the matrix of frobenius.
 */ 
 B = 2^(-1) * A; 
 /* Freed 4859 lists. */
+The sign is: -1
+The characteristic polynomial is: x^9 - 2*x^8 - x^7 + 6*x^6 - 8*x^5 - 16*x^4 + 48*x^3 - 32*x^2 - 256*x + 512
+Its Newton polygon is: [2, 2, 1, 1, 1, 1, 1, 0, 0]
+Its factorization is: [x - 2, 2; x + 2, 1; x^6 + 3*x^4 + 4*x^3 + 12*x^2 + 64, 1]
+The valuation of f-g is: 32
+The valuation of subst(g,x,A) is: 31

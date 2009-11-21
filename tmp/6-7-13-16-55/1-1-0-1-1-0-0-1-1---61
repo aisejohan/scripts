@@ -227,3 +227,9 @@ This should be the matrix of frobenius!
 */ 
 B = A; 
 /* Freed 4860 lists. */
+The sign is: -1
+The characteristic polynomial is: x^9 - 3*x^8 - 2*x^7 + 12*x^6 - 8*x^5 - 16*x^4 + 96*x^3 - 64*x^2 - 384*x + 512
+Its Newton polygon is: [2, 1, 1, 1, 1, 1, 1, 1, 0]
+Its factorization is: [x - 2, 2; x + 2, 1; x^6 - x^5 - 16*x + 64, 1]
+The valuation of f-g is: 30
+The valuation of subst(g,x,A) is: 30

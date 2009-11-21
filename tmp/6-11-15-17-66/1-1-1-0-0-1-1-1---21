@@ -129,3 +129,9 @@ This matrix times 2^(-2) should be the matrix of frobenius.
 */ 
 B = 2^(-2) * A; 
 /* Freed 1147 lists. */
+The sign is: 1
+The characteristic polynomial is: x^8 + x^6 + 8*x^4 + 16*x^2 + 256
+Its Newton polygon is: [2, 2, 1, 1, 1, 1, 0, 0]
+Its factorization is: Mat([x^8 + x^6 + 8*x^4 + 16*x^2 + 256, 1])
+The valuation of f-g is: 28
+The valuation of subst(g,x,A) is: 27
