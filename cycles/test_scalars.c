@@ -207,5 +207,6 @@ int main()
 	}
 	deallocate_GVMnewMMold();
 	free_reserves();
+	printf("\n");
 	exit(0);
 }
