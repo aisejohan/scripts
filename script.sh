@@ -1,6 +1,6 @@
 #! /bin/bash
 
-gawk '{if (($5 < 100) && ($8 > 1) && ($6 < 10)) print $0}' lists/surface_pg_at_most_10_new > tmp/list
+echo "35 41 43 57 385 7 4 2 6 2" > tmp/list
 
 change_data()
 {
@@ -67,6 +67,11 @@ do
 	d3=${arr[2]}
 	d4=${arr[3]}
 	d=${arr[4]}
+	grep -q "$d1 $d2 $d3 $d4 $d" tmp/list_done
+	if [ $? == 0 ]; then
+		echo "This case: $d1 $d2 $d3 $d4 $d already done"
+		exit 1
+	fi
 	change_data
 	make_grobner
 	run_grobner

@@ -50,6 +50,11 @@ do
 	d3=${arr[2]}
 	d4=${arr[3]}
 	d=${arr[4]}
+	grep -q "$d1 $d2 $d3 $d4 $d" tmp/list_done
+	if [ $? == 0 ]; then
+		echo "This case: $d1 $d2 $d3 $d4 $d already done"
+		exit 1
+	fi
 	change_data
 	prepare_list_grobner
 	make_cycles

@@ -25,6 +25,11 @@ do
 	d3=${arr[2]}
 	d4=${arr[3]}
 	d=${arr[4]}
+	grep -q "$d1 $d2 $d3 $d4 $d" tmp/list_done
+	if [ $? == 0 ]; then
+		echo "This case: $d1 $d2 $d3 $d4 $d already done"
+		exit 1
+	fi
 	prepare_list_grobner
 	run_gp
 done
