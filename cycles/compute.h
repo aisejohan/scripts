@@ -40,5 +40,5 @@ extern struct lijst G;
 extern struct polynomial myf;
 
 /* Functions used in other files. */
-int setup(struct polynomial A, struct polynomial B, struct polynomial C, int silent);
+int setup(struct polynomial A, struct polynomial B, struct polynomial C, struct polynomial D, int bound, int silent);
 void deallocate_GVMnewMMold(void );
