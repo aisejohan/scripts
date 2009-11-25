@@ -512,7 +512,7 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, struct 
 			SS = s_pol(*G.ff[ii], *G.ff[jj]); 
 			if ((SS.leading) &&
 					(!zero_on_division(SS, G.len, G.ff))) {
-				G.len++;		
+				G.len++;
 				if (G.len > G_len) {
 					allocate_GVMnew(G.len);
 				}
