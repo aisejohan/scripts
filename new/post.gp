@@ -89,7 +89,7 @@ do_it(A)=
 	local(p,lijst,m,c,l,d,f,g);
 	f = charpoly(A);
 	d = matdet(denominator(A)*A);
-	lijst = factor(d,1);
+	lijst = factor(d,0);
 	l = matsize(lijst)[1];
 	m = lijst[1,2];
 	c = 1;

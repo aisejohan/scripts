@@ -43,11 +43,11 @@
  * can be much faster. */
 #define NEW_GROBNER
 
-#define d1	35
-#define d2	41
-#define d3	43
-#define d4	57
-#define d	385
+#define d1	12
+#define d2	23
+#define d3	35
+#define d4	66
+#define d	276
 #define p	2
 #define r	40		/* Exponent. */
 #define q	27		/* Power of p. */

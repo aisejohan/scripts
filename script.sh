@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "35 41 43 57 385 7 4 2 6 2" > tmp/list
+echo "12 23 35 66 276 11 5 5 10 5" > tmp/list
 
 change_data()
 {

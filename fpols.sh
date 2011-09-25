@@ -13,7 +13,7 @@ run_gp()
 	cat tmp/list_grobner | while read lijn
 	do
 		naam=$(echo "$lijn" | sed "s/ /-/g")
-		gp -q tmp/$d1-$d2-$d3-$d4-$d/$naam do_it.gp >> tmp/$d1-$d2-$d3-$d4-$d/$naam
+		gp -f -q tmp/$d1-$d2-$d3-$d4-$d/$naam do_it.gp >> tmp/$d1-$d2-$d3-$d4-$d/$naam
 	done
 }
 
