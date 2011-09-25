@@ -43,11 +43,11 @@
  * can be much faster. */
 #define NEW_GROBNER
 
-#define d1	29
-#define d2	31
-#define d3	33
-#define d4	154
-#define d	495
+#define d1	31
+#define d2	37
+#define d3	71
+#define d4	92
+#define d	589
 #define p	2
 #define r	256		/* Exponent. */
 #define q	35		/* Largest power of Delta. */
