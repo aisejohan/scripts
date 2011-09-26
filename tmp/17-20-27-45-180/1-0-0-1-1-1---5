@@ -1,0 +1,103 @@
+/* Comments begin... 
+No set up needed.
+
+Please input coefficients below.
+Coefficient of   x^9 * z^1               = Coefficient of   x^4 * y^2 * z^1 * w^1   = Coefficient of   x^2 * y^1 * z^3 * w^1   = Coefficient of   y^9                     = Coefficient of   z^5 * w^1               = Coefficient of   w^4                     = 
+Here is the polynomial we're using this time:
+
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^9*z^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*y^9 + 1 + 0*2^64 + 0*2^128 + 0*2^192*z^5*w^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*w^4
+
+
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+The final length of G is 6
+[0, 0, 5, 0, 0]  	135	2  <--- 3
+[9, 0, 0, 0, 0]  	153	2  <--- 1
+[0, 8, 0, 0, 0]  	160	1  <--- 2
+[8, 0, 1, 0, 0]  	163	1 
+[0, 0, 0, 4, 0]  	180	1  <--- 4
+[8, 0, 0, 3, 2]  	271	1 
+------
+The gap is between 3 and 255.
+Lengths: 2 2 4 4 2 2.
+For 431 = 3*d-d1-d2-d3-d4 you get 2 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^6*y^7*z^2*w^3
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^4*y^6*z^4*w^3
+
+For 251 = 2*d-d1-d2-d3-d4 you get 4 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^7*y^3*z^1*w^1
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^5*y^2*z^3*w^1
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^2*y^5*z^1*w^2
+1 + 0*2^64 + 0*2^128 + 0*2^192*y^4*z^3*w^2
+
+For 71 = d-d1-d2-d3-d4 you get 2 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^3*y^1
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^1*z^2
+
+Extra powers of p used 0.
+The invariant extra is equal to 33.
+Start computing 2^4 Delta^1 (x1x2x3x4)^1... Done.
+Start computing 2^5 Delta^2 (x1x2x3x4)^1... Done.
+Start computing 2^6 Delta^3 (x1x2x3x4)^1... Done.
+Start computing 2^7 Delta^4 (x1x2x3x4)^1... Done.
+Start computing 2^8 Delta^5 (x1x2x3x4)^1... Done.
+Start computing 2^9 Delta^6 (x1x2x3x4)^1... Done.
+Start computing 2^10 Delta^7 (x1x2x3x4)^1... Done.
+Start computing 2^11 Delta^8 (x1x2x3x4)^1... Done.
+Start computing 2^12 Delta^9 (x1x2x3x4)^1... Done.
+Start computing 2^13 Delta^10 (x1x2x3x4)^1... Done.
+Start computing 2^14 Delta^11 (x1x2x3x4)^1... Done.
+Start computing 2^15 Delta^12 (x1x2x3x4)^1... Done.
+Start computing 2^16 Delta^13 (x1x2x3x4)^1... Done.
+Start computing 2^17 Delta^14 (x1x2x3x4)^1... Done.
+Start computing 2^18 Delta^15 (x1x2x3x4)^1... Done.
+Start computing 2^19 Delta^16 (x1x2x3x4)^1... Done.
+Start computing 2^20 Delta^17 (x1x2x3x4)^1... Done.
+Start computing 2^21 Delta^18 (x1x2x3x4)^1... Done.
+Start computing 2^22 Delta^19 (x1x2x3x4)^1... Done.
+Start computing 2^23 Delta^20 (x1x2x3x4)^1... Done.
+Start computing 2^24 Delta^21 (x1x2x3x4)^1... Done.
+Start computing 2^25 Delta^22 (x1x2x3x4)^1... Done.
+Start computing 2^26 Delta^23 (x1x2x3x4)^1... Done.
+Start computing 2^27 Delta^24 (x1x2x3x4)^1... Done.
+Start computing 2^28 Delta^25 (x1x2x3x4)^1... Done.
+Start computing 2^29 Delta^26 (x1x2x3x4)^1... Done.
+Start computing 2^30 Delta^27 (x1x2x3x4)^1... Done.
+Start computing 2^31 Delta^28 (x1x2x3x4)^1... Done.
+Start computing 2^32 Delta^29 (x1x2x3x4)^1... Done.
+Start computing 2^33 Delta^30 (x1x2x3x4)^1... Done.
+Start computing 2^34 Delta^31 (x1x2x3x4)^1... Done.
+Start computing 2^35 Delta^32 (x1x2x3x4)^1... Done.
+Start computing 2^36 Delta^33 (x1x2x3x4)^1... Done.
+Start computing 2^37 Delta^34 (x1x2x3x4)^1... Done.
+Start computing 2^38 Delta^35 (x1x2x3x4)^1... Done.
+Start computing aa.
+1 2 3 4 5 6 7 8 
+*/
+A = \
+[0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,7925227035326007336 + 16121938822256414614*2^64 + 13119927812165295212*2^128 + 667106675*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+18190987173567055702 + 18036822745302018963*2^64 + 15198069179905822682*2^128 + 66927196*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,10822550054251450248 + 8690876823784246307*2^64 + 1822165975429069944*2^128 + 267573962*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,13218316350897782788 + 6918037921954565983*2^64 + 17870723357867203136*2^128 + 373450658*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,13218316350897782788 + 6918037921954565983*2^64 + 17870723357867203136*2^128 + 843212706*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,3793352114734205167 + 3985239593048265678*2^64 + 6110375149438771220*2^128 + 796143166*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,10087466899159119896 + 7688649462670555174*2^64 + 10889552667858902160*2^128 + 59394604*2^192;\
+0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,9038441808097661132 + 5246859112377971926*2^64 + 7495736649049714308*2^128 + 41809095*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192,0 + 0*2^64 + 0*2^128 + 0*2^192]
+/* 
+This matrix times 2^(-1) should be the matrix of frobenius.
+*/ 
+B = 2^(-1) * A; 
+/* Freed 284 lists. */
+The sign is: 1
+The characteristic polynomial is: x^8 - 4*x^6 - 64*x^2 + 256
+Its Newton polygon is: [1, 1, 1, 1, 1, 1, 1, 1]
+Its factorization is: [x - 2, 2; x + 2, 2; x^2 - 2*x + 4, 1; x^2 + 2*x + 4, 1]
+The valuation of f-g is: 37
+The valuation of subst(g,x,A) is: 37
+
+Please input coefficients below.
+The polynomial is: 1*x^9*z^1 + 1*y^9 + 1*z^5*w^1 + 1*w^4
+Total 167: 1 2 3 4 5 6 7 
+Look at the ideal generated by: 
+1*x^3*z^2 + 1*y^3*w^1
+1*z^5 + 1*w^3

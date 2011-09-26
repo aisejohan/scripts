@@ -1,0 +1,13 @@
+Coefficient of   x^9 * z^1               = 1
+Coefficient of   x^4 * y^2 * z^1 * w^1   = 1
+Coefficient of   x^2 * y^1 * z^3 * w^1   = 1
+Coefficient of   y^9                     = 1
+Coefficient of   z^5 * w^1               = 1
+Coefficient of   w^4                     = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+1 0 0 1 1 1   5
+1 1 0 1 1 1   8
+1 0 1 1 1 1   26
+1 1 1 1 1 1   29
