@@ -311,10 +311,10 @@ static void adjust(struct exponents tmp)
 	if (tmp.e1 + tmp.e3 + tmp.e4 == 0) t134 = 0;
 	if (tmp.e2 + tmp.e3 + tmp.e4 == 0) t234 = 0;
 	if (tmp.e1 + tmp.e2 == 0) p12 = 0;
-	if (tmp.e1 + tmp.e2 == 0) p13 = 0;
-	if (tmp.e1 + tmp.e2 == 0) p14 = 0;
-	if (tmp.e2 + tmp.e3 == 0) p24 = 0;
-	if (tmp.e2 + tmp.e4 == 0) p23 = 0;
+	if (tmp.e1 + tmp.e3 == 0) p13 = 0;
+	if (tmp.e1 + tmp.e4 == 0) p14 = 0;
+	if (tmp.e2 + tmp.e3 == 0) p23 = 0;
+	if (tmp.e2 + tmp.e4 == 0) p24 = 0;
 	if (tmp.e3 + tmp.e4 == 0) p34 = 0;
 	if (tmp.e1 == 0) s1 = 0;
 	if (tmp.e2 == 0) s2 = 0;
