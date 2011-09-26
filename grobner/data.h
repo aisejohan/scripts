@@ -44,10 +44,10 @@
 #define NEW_GROBNER
 
 #define d1	13
-#define d2	16
-#define d3	27
-#define d4	36
-#define d	144
+#define d2	18
+#define d3	21
+#define d4	43
+#define d	147
 #define p	2
 #define r	40		/* Exponent. */
 #define q	27		/* Power of p. */
