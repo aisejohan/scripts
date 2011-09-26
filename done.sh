@@ -13,5 +13,8 @@ do
 		echo "This case: $d1 $d2 $d3 $d4 $d already done"
 		exit 1
 	fi
+	git add tmp/$d1-$d2-$d3$d4-$d
+	git add tmp/grobner-$d1-$d2-$d3-$d4-$d
 	echo $line >> tmp/list_done
+	git commit -a
 done
