@@ -43,11 +43,11 @@
  * can be much faster. */
 #define NEW_GROBNER
 
-#define d1	7
-#define d2	16
-#define d3	20
-#define d4	25
-#define d	100
+#define d1	16
+#define d2	19
+#define d3	21
+#define d4	56
+#define d	168
 #define p	2
 
 #define maxlength	20
