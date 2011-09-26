@@ -1,0 +1,65 @@
+Coefficient of   x^13                     = 1
+Coefficient of   x^6 * y^3 * z^1         = 1
+Coefficient of   x^4 * y^2 * z^1 * w^1   = 1
+Coefficient of   x^3 * y^2 * z^3         = 1
+Coefficient of   x^2 * y^7               = 1
+Coefficient of   x^2 * y^1 * z^1 * w^2   = 1
+Coefficient of   x^1 * y^1 * z^3 * w^1   = 1
+Coefficient of   y^6 * w^1               = 1
+Coefficient of   y^1 * z^5               = 1
+Coefficient of   z^1 * w^3               = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+Allocate M_len = 800 elements.
+Allocate G_len 80 elements and old = 40.
+Allocate M_len = 1600 elements.
+Allocate M_len = 3200 elements.
+Allocate G_len 160 elements and old = 80.
+1 0 0 0 0 0 0 1 1 1   7
+1 1 0 0 0 0 0 1 1 1   16
+1 0 1 0 0 0 0 1 1 1   26
+1 1 1 0 0 0 0 1 1 1   44
+1 0 0 1 0 0 0 1 1 1   19
+1 0 1 1 0 0 0 1 1 1   47
+1 1 1 1 0 0 0 1 1 1   78
+1 0 0 0 1 0 0 1 1 1   23
+1 1 0 0 1 0 0 1 1 1   30
+1 0 1 0 1 0 0 1 1 1   43
+1 1 1 0 1 0 0 1 1 1   44
+1 0 0 1 1 0 0 1 1 1   51
+1 1 0 1 1 0 0 1 1 1   57
+1 1 1 1 1 0 0 1 1 1   85
+1 0 0 0 0 1 0 1 1 1   22
+1 1 0 0 0 1 0 1 1 1   29
+1 0 1 0 0 1 0 1 1 1   47
+1 1 1 0 0 1 0 1 1 1   42
+1 1 0 1 0 1 0 1 1 1   63
+1 0 1 1 0 1 0 1 1 1   68
+1 1 1 1 0 1 0 1 1 1   71
+1 0 0 0 1 1 0 1 1 1   22
+1 1 0 0 1 1 0 1 1 1   38
+1 0 1 0 1 1 0 1 1 1   46
+1 1 1 0 1 1 0 1 1 1   36
+1 0 0 1 1 1 0 1 1 1   38
+1 1 0 1 1 1 0 1 1 1   70
+1 1 1 1 1 1 0 1 1 1   71
+1 0 0 0 0 0 1 1 1 1   23
+1 1 0 0 0 0 1 1 1 1   61
+1 0 0 1 0 0 1 1 1 1   51
+1 1 0 1 0 0 1 1 1 1   71
+1 0 1 1 0 0 1 1 1 1   66
+1 0 0 0 1 0 1 1 1 1   32
+Allocate M_len = 6400 elements.
+1 1 1 0 1 0 1 1 1 1   105
+1 0 1 1 1 0 1 1 1 1   68
+1 1 1 1 1 0 1 1 1 1   104
+1 0 0 0 0 1 1 1 1 1   38
+1 1 0 0 0 1 1 1 1 1   58
+1 1 0 1 0 1 1 1 1 1   76
+1 1 1 1 0 1 1 1 1 1   71
+1 0 0 0 1 1 1 1 1 1   63
+1 0 1 0 1 1 1 1 1 1   94
+1 1 1 0 1 1 1 1 1 1   83
+1 0 1 1 1 1 1 1 1 1   96
+1 1 1 1 1 1 1 1 1 1   80

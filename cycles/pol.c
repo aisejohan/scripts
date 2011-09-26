@@ -29,7 +29,7 @@
 #include "scalar.h"
 #include "pol.h"
 
-#define NR_RESERVE	1024
+#define NR_RESERVE	1023
 static struct term *reserve = NULL;
 static struct term *lists = NULL;
 

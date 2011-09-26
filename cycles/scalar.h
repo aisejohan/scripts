@@ -28,6 +28,6 @@ extern scalar muls[2][2];
 
 void print_scalar(scalar a);
 
-#define sc_neg_inv(i)           neg_invs[i]
-#define sc_sum(i,j)             sums[i][j]
-#define sc_mul(i,j)             muls[i][j]
+#define sc_neg_inv(i)           i
+#define sc_sum(i,j)             i^j
+#define sc_mul(i,j)             i & j

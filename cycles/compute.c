@@ -52,6 +52,9 @@ static struct pair *Mold;
 static struct pair *Mnew;
 static int M_len = 0;
 static int G_len = 0;
+static int s1, s2, s3, s4;
+static int p12, p13, p14, p23, p24, p34;
+static int t123, t124, t134, t234;
 
 void allocate_GVMnew(int at_least)
 {
@@ -266,6 +269,7 @@ static struct polynomial s_pol(struct polynomial f, struct polynomial g)
 	return(A);
 }
 
+
 /* Outputs G.							*/
 static unsigned int print_G(void)
 {
@@ -300,52 +304,56 @@ static unsigned int print_G(void)
 	return(success);
 }
 
-static unsigned int dim_G(void)
+static void adjust(struct exponents tmp)
 {
-	int i;
-	int s1 = 1, s2 = 1, s3 = 1, s4 = 1;
-	int p12 = 1, p13 = 1, p14 = 1, p23 = 1, p24 = 1, p34 = 1;
-	int t123 = 1, t124 = 1, t134 = 1, t234 = 1;
-	struct exponents tmp;
+	if (tmp.e1 + tmp.e2 + tmp.e3 == 0) t123 = 0;
+	if (tmp.e1 + tmp.e2 + tmp.e4 == 0) t124 = 0;
+	if (tmp.e1 + tmp.e3 + tmp.e4 == 0) t134 = 0;
+	if (tmp.e2 + tmp.e3 + tmp.e4 == 0) t234 = 0;
+	if (tmp.e1 + tmp.e2 == 0) p12 = 0;
+	if (tmp.e1 + tmp.e2 == 0) p13 = 0;
+	if (tmp.e1 + tmp.e2 == 0) p14 = 0;
+	if (tmp.e2 + tmp.e3 == 0) p24 = 0;
+	if (tmp.e2 + tmp.e4 == 0) p23 = 0;
+	if (tmp.e3 + tmp.e4 == 0) p34 = 0;
+	if (tmp.e1 == 0) s1 = 0;
+	if (tmp.e2 == 0) s2 = 0;
+	if (tmp.e3 == 0) s3 = 0;
+	if (tmp.e4 == 0) s4 = 0;
+}
 
-	if (G.len == 0) return 4;
-	for (i = 0; i + 1 <= G.len; i++) {
-		tmp = *G.ee[i];
-		if (tmp.e1 + tmp.e2 + tmp.e3 == 0) t123 = 0;
-		if (tmp.e1 + tmp.e2 + tmp.e4 == 0) t124 = 0;
-		if (tmp.e1 + tmp.e3 + tmp.e4 == 0) t134 = 0;
-		if (tmp.e2 + tmp.e3 + tmp.e4 == 0) t234 = 0;
-		if (tmp.e1 + tmp.e2 == 0) p12 = 0;
-		if (tmp.e1 + tmp.e2 == 0) p13 = 0;
-		if (tmp.e1 + tmp.e2 == 0) p14 = 0;
-		if (tmp.e2 + tmp.e3 == 0) p24 = 0;
-		if (tmp.e2 + tmp.e4 == 0) p23 = 0;
-		if (tmp.e3 + tmp.e4 == 0) p34 = 0;
-		if (tmp.e1 == 0) s1 = 0;
-		if (tmp.e2 == 0) s2 = 0;
-		if (tmp.e3 == 0) s3 = 0;
-		if (tmp.e4 == 0) s4 = 0;
-	}
+static unsigned int compute_dim_G(void)
+{
 	if ((s1) || (s2) || (s3) || (s4)) return 3;
 	if ((p12) || (p13) || (p14) || (p23) || (p24) || (p34)) return 2;
 	if ((t123) || (t124) || (t134) || (t234)) return 1;
 	return 0;
 }
 
-static unsigned int test_G(void)
+static unsigned int dim_G(void)
 {
-	int i, s1 = 0, s2 = 0, s3 = 0, s4 = 0, success;
-	struct exponents tmp;
+	int i;
 
+	s1 = 1;
+	s2 = 1;
+	s3 = 1;
+	s4 = 1;
+	p12 = 1;
+	p13 = 1;
+	p14 = 1;
+	p23 = 1;
+	p24 = 1;
+	p34 = 1;
+	t123 = 1;
+	t124 = 1;
+	t134 = 1;
+	t234 = 1;
+
+	if (G.len == 0) return 4;
 	for (i = 0; i + 1 <= G.len; i++) {
-		tmp = *G.ee[i];
-		if (tmp.e1 + tmp.e2 + tmp.e3 == 0) s4 = 1;
-		if (tmp.e1 + tmp.e2 + tmp.e4 == 0) s3 = 1;
-		if (tmp.e1 + tmp.e3 + tmp.e4 == 0) s2 = 1;
-		if (tmp.e2 + tmp.e3 + tmp.e4 == 0) s1 = 1;
+		adjust(*G.ee[i]);
 	}
-	success = s1 + s2 + s3 + s4;
-	return(success);
+	return compute_dim_G();
 }
 
 /* Silly sort should be OK since the length of G is at most maxlength.	*
@@ -370,7 +378,6 @@ static void sort_G(void)
 		}
 	}
 }
-
 
 static unsigned int test_skip(struct pair try, struct exponents least)
 {
@@ -397,18 +404,31 @@ static unsigned int test_skip(struct pair try, struct exponents least)
 	return(0);
 }
 
-int setup(struct polynomial A, struct polynomial B, struct polynomial C, int silent)
+/* bound means dim >= bound */
+int setup(struct polynomial A, struct polynomial B, struct polynomial C, struct polynomial D, int bound, int silent)
 {
-	int i, j, k, ii, jj, old, new, check, epsilon;
+	int i, j, k, ii, jj, old, new, check, dimension;
 	struct pair tmppair;
 	struct polynomial SS, T;
-	struct polynomial *Tff;
-	struct exponents *Tee;
-	struct polynomial **bb;
 	unsigned int m, mold, mnew;
 	struct exponents lcm_new, lcm_old;
 	SS.leading = NULL;
 	T.leading = NULL;
+
+	s1 = 1;
+	s2 = 1;
+	s3 = 1;
+	s4 = 1;
+	p12 = 1;
+	p13 = 1;
+	p14 = 1;
+	p23 = 1;
+	p24 = 1;
+	p34 = 1;
+	t123 = 1;
+	t124 = 1;
+	t134 = 1;
+	t234 = 1;
 
 	/* Allocate memory for G, V, M, Mold, Mnew */
 	allocate_GVMnew(10);
@@ -417,14 +437,31 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, int sil
 	/* Initialize G */
 	*G.ff[0] = copy_pol(A);
 	*G.ee[0] = take_exponents(A);
+	G.len = 1;
+	adjust(*G.ee[0]);
+	dimension = compute_dim_G();
+	if (dimension < bound) goto uit;
 	*G.ff[1] = copy_pol(B);
 	*G.ee[1] = take_exponents(B);
+	G.len = 2;
+	adjust(*G.ee[1]);
+	dimension = compute_dim_G();
+	if (dimension < bound) goto uit;
 	if (C.leading) {
 		*G.ff[2] = copy_pol(C);
 		*G.ee[2] = take_exponents(C);
 		G.len = 3;
-	} else {
-		G.len = 2;
+		adjust(*G.ee[2]);
+		dimension = compute_dim_G();
+		if (dimension < bound) goto uit;
+		if (D.leading) {
+			*G.ff[3] = copy_pol(D);
+			*G.ee[3] = take_exponents(D);
+			G.len = 4;
+			adjust(*G.ee[3]);
+			dimension = compute_dim_G();
+			if (dimension < bound) goto uit;
+		}
 	}
 
 	sort_G();
@@ -475,7 +512,7 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, int sil
 			SS = s_pol(*G.ff[ii], *G.ff[jj]); 
 			if ((SS.leading) &&
 					(!zero_on_division(SS, G.len, G.ff))) {
-				G.len++;		
+				G.len++;
 				if (G.len > G_len) {
 					allocate_GVMnew(G.len);
 				}
@@ -494,6 +531,10 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, int sil
 			gen_division(&SS, G.len - 1, G.ff);
 			*G.ff[G.len - 1] = SS;
 			*G.ee[G.len - 1] = take_exponents(SS); /* Done updating G. */
+
+			adjust(*G.ee[G.len - 1]);
+			dimension = compute_dim_G();
+			if (dimension < bound) goto uit;
 
 			/* Update M and V. */
 			for (i = 0; i < G.len; i++) {
@@ -574,60 +615,6 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, int sil
 		}
 	}/* End loop computing Grobner basis. */
 
-	/* Weed out G. 						*
-	 * Do not need to update M,m,V since they are no	*
-	 * longer used.						*
-	 * Below we order the elements of G.			*/
-	old = G.len; /* Remember for freeing bb later. */
-	bb = (struct polynomial **)malloc(G.len*sizeof(struct polynomial *));
-	if (!bb) {
-		perror("Malloc failed!");
-		exit(1);
-	}
-	for (i = 0; i + 1 <= G.len; i++) {
-		bb[i] = NULL;
-		make_pol(&bb[i]);
-	}
-	i = 0;
-	while (i + 1 <= G.len) {
-		for (j = 0; j + 1 <= G.len; j++) {
-			if (j != i) {
-				epsilon = (j>i) ? 1 : 0;
-				bb[j-epsilon]->degree = G.ff[j]->degree;
-				bb[j-epsilon]->leading = G.ff[j]->leading;
-			}
-		}
-		
-		new = G.len - 1; /* Remember for freeing aa later. */
-		gen_division(G.ff[i], G.len - 1, bb);
-
-		/* Either omit G[i] or replace it. */
-		if (!G.ff[i]->leading) {
-			Tff = G.ff[i];
-			Tee = G.ee[i];
-			for (j = i; j + 1 + 1 <= G.len; j++) {
-				G.ff[j] = G.ff[j + 1];
-				G.ee[j] = G.ee[j + 1];
-			}
-			G.ff[G.len - 1] = Tff;
-			G.ee[G.len - 1] = Tee;
-			G.len--;
-		} else {
-			/* This should not be necessary. */
-			*G.ee[i] = take_exponents(*G.ff[i]); 
-			/* Only in this case do we update i! */
-			i++;
-		}
-
-	}
-	
-	/* Free bb. */
-	for (j = 0; j + 1 <= old; j++) {
-		bb[j]->leading = NULL;
-		free(bb[j]);
-	}
-	free(bb);
-
 	if (!silent) {
 		sort_G();
 		printf("The final length of G is %d\n", G.len);
@@ -635,10 +622,12 @@ int setup(struct polynomial A, struct polynomial B, struct polynomial C, int sil
 		printf("------\n");
 	}
 
+	dimension = compute_dim_G();
+
+uit:
 	for (i = 0; i + 1 <= G.len; i++) {
 		free_tail(G.ff[i]->leading);
 	}
 
-	/* Success. */
-	return(dim_G());
+	return dimension;
 }
