@@ -1,0 +1,24 @@
+Coefficient of   x^12 * y^1               = 1
+Coefficient of   x^5 * z^2 * w^1         = 1
+Coefficient of   x^4 * y^2 * z^2         = 1
+Coefficient of   x^2 * y^1 * z^1 * w^2   = 1
+Coefficient of   x^1 * y^3 * z^1 * w^1   = 1
+Coefficient of   y^5 * z^1               = 1
+Coefficient of   z^5                     = 1
+Coefficient of   w^4                     = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+Allocate M_len = 800 elements.
+Allocate G_len 80 elements and old = 40.
+Allocate M_len = 1600 elements.
+1 1 0 0 0 1 1 1   11
+1 1 1 0 0 1 1 1   21
+1 1 0 1 0 1 1 1   23
+1 1 1 1 0 1 1 1   31
+1 0 0 0 1 1 1 1   18
+1 1 0 0 1 1 1 1   40
+1 0 1 0 1 1 1 1   27
+1 0 0 1 1 1 1 1   30
+1 1 0 1 1 1 1 1   63
+1 0 1 1 1 1 1 1   31
