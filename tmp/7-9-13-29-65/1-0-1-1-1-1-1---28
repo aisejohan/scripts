@@ -1,0 +1,154 @@
+/* Comments begin... 
+No set up needed.
+
+Please input coefficients below.
+Coefficient of   x^8 * y^1               = Coefficient of   x^3 * y^2 * z^2         = Coefficient of   x^2 * y^1 * z^1 * w^1   = Coefficient of   x^1 * y^5 * z^1         = Coefficient of   x^1 * w^2               = Coefficient of   y^4 * w^1               = Coefficient of   z^5                     = 
+Here is the polynomial we're using this time:
+
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^8*y^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*x^2*y^1*z^1*w^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*x^1*y^5*z^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*x^1*w^2 + 1 + 0*2^64 + 0*2^128 + 0*2^192*y^4*w^1 + 1 + 0*2^64 + 0*2^128 + 0*2^192*z^5
+
+
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+Allocate M_len = 800 elements.
+Allocate G_len 80 elements and old = 40.
+Allocate M_len = 1600 elements.
+Allocate M_len = 3200 elements.
+Allocate G_len 160 elements and old = 80.
+The final length of G is 66
+[2, 1, 1, 0, 0]  	36	3 
+[2, 1, 0, 1, 0]  	52	3 
+[8, 0, 0, 0, 0]  	56	4  <--- 1
+[1, 5, 1, 0, 0]  	65	3 
+[1, 0, 0, 2, 0]  	65	3 
+[1, 4, 0, 1, 0]  	72	3 
+[2, 0, 5, 0, 0]  	79	2 
+[1, 1, 5, 0, 0]  	81	2 
+[7, 4, 0, 0, 0]  	85	4 
+[6, 5, 0, 0, 0]  	87	3 
+[1, 0, 4, 1, 0]  	88	2 
+[6, 0, 4, 0, 0]  	94	2 
+[0, 9, 1, 0, 0]  	94	3 
+[5, 7, 0, 0, 0]  	98	4 
+[4, 8, 0, 0, 0]  	100	3 
+[0, 5, 2, 1, 0]  	100	3 
+[0, 7, 1, 1, 0]  	105	3 
+[0, 4, 1, 2, 0]  	107	2 
+[0, 5, 5, 0, 0]  	110	2 
+[3, 10, 0, 0, 0]  	111	2 
+[1, 0, 8, 0, 0]  	111	2 
+[0, 8, 3, 0, 0]  	111	2 
+[0, 6, 0, 2, 0]  	112	2 
+[2, 11, 0, 0, 0]  	113	2 
+[0, 1, 8, 0, 0]  	113	2 
+[0, 4, 6, 0, 0]  	114	2 
+[0, 3, 7, 0, 0]  	118	2 
+[0, 10, 0, 1, 0]  	119	2 
+[0, 0, 7, 1, 0]  	120	1 
+[0, 4, 0, 3, 0]  	123	2 
+[1, 13, 0, 0, 0]  	124	2 
+[0, 2, 6, 1, 0]  	125	1 
+[0, 1, 0, 4, 0]  	125	1 
+[0, 14, 0, 0, 0]  	126	2  <--- 2
+[0, 3, 1, 3, 0]  	127	1 
+[0, 0, 1, 4, 0]  	129	1 
+[0, 1, 5, 2, 0]  	132	1 
+[0, 0, 6, 2, 0]  	136	1 
+[0, 0, 4, 3, 0]  	139	1 
+[0, 0, 11, 0, 0]  	143	1  <--- 3
+[0, 0, 0, 5, 0]  	145	1  <--- 4
+[7, 0, 0, 1, 1]  	78	3 
+[1, 0, 6, 0, 1]  	85	3 
+[5, 0, 3, 1, 1]  	103	3 
+[0, 4, 3, 1, 1]  	104	2 
+[0, 1, 6, 1, 1]  	116	2 
+[7, 1, 0, 0, 3]  	58	4 
+[5, 5, 0, 0, 3]  	80	5 
+[5, 0, 4, 0, 3]  	87	4 
+[3, 8, 0, 0, 3]  	93	4 
+[1, 11, 0, 0, 3]  	106	3 
+[6, 0, 0, 1, 4]  	71	5 
+[4, 0, 3, 1, 4]  	96	4 
+[0, 6, 1, 1, 252]  	96	3 
+[0, 5, 1, 1, 253]  	87	3 
+[0, 5, 4, 0, 253]  	97	2 
+[1, 1, 1, 1, 254]  	58	3 
+[0, 5, 1, 0, 255]  	58	2 
+[5, 4, 0, 0, 255]  	71	4 
+[3, 7, 0, 0, 255]  	84	4 
+[1, 10, 0, 0, 255]  	97	3 
+[0, 5, 0, 2, 255]  	103	1 
+[0, 0, 8, 0, 255]  	104	1 
+[0, 9, 0, 1, 255]  	110	2 
+[0, 0, 0, 4, 255]  	116	1 
+[0, 13, 0, 0, 255]  	117	1 
+------
+The gap is between 5 and 251.
+Lengths: 1 1 2 2 1 1.
+For 137 = 3*d-d1-d2-d3-d4 you get 1 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*y^3*z^4*w^2
+
+For 72 = 2*d-d1-d2-d3-d4 you get 2 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^1*z^5
+1 + 0*2^64 + 0*2^128 + 0*2^192*y^8
+
+For 7 = d-d1-d2-d3-d4 you get 1 in char 0.
+1 + 0*2^64 + 0*2^128 + 0*2^192*x^1
+
+Extra powers of p used 0.
+The invariant extra is equal to 33.
+Start computing 2^4 Delta^1 (x1x2x3x4)^1... Done.
+Start computing 2^5 Delta^2 (x1x2x3x4)^1... Done.
+Start computing 2^6 Delta^3 (x1x2x3x4)^1... Done.
+Start computing 2^7 Delta^4 (x1x2x3x4)^1... Done.
+Start computing 2^8 Delta^5 (x1x2x3x4)^1... Done.
+Start computing 2^9 Delta^6 (x1x2x3x4)^1... Done.
+Start computing 2^10 Delta^7 (x1x2x3x4)^1... Done.
+Start computing 2^11 Delta^8 (x1x2x3x4)^1... Done.
+Start computing 2^12 Delta^9 (x1x2x3x4)^1... Done.
+Start computing 2^13 Delta^10 (x1x2x3x4)^1... Done.
+Start computing 2^14 Delta^11 (x1x2x3x4)^1... Done.
+Start computing 2^15 Delta^12 (x1x2x3x4)^1... Done.
+Start computing 2^16 Delta^13 (x1x2x3x4)^1... Done.
+Start computing 2^17 Delta^14 (x1x2x3x4)^1... Done.
+Start computing 2^18 Delta^15 (x1x2x3x4)^1... Done.
+Start computing 2^19 Delta^16 (x1x2x3x4)^1... Done.
+Start computing 2^20 Delta^17 (x1x2x3x4)^1... Done.
+Start computing 2^21 Delta^18 (x1x2x3x4)^1... Done.
+Start computing 2^22 Delta^19 (x1x2x3x4)^1... Done.
+Start computing 2^23 Delta^20 (x1x2x3x4)^1... Done.
+Start computing 2^24 Delta^21 (x1x2x3x4)^1... Done.
+Start computing 2^25 Delta^22 (x1x2x3x4)^1... Done.
+Start computing 2^26 Delta^23 (x1x2x3x4)^1... Done.
+Start computing 2^27 Delta^24 (x1x2x3x4)^1... Done.
+Start computing 2^28 Delta^25 (x1x2x3x4)^1... Done.
+Start computing 2^29 Delta^26 (x1x2x3x4)^1... Done.
+Start computing 2^30 Delta^27 (x1x2x3x4)^1... Done.
+Start computing 2^31 Delta^28 (x1x2x3x4)^1... Done.
+Start computing 2^32 Delta^29 (x1x2x3x4)^1... Done.
+Start computing 2^33 Delta^30 (x1x2x3x4)^1... Done.
+Start computing 2^34 Delta^31 (x1x2x3x4)^1... Done.
+Start computing 2^35 Delta^32 (x1x2x3x4)^1... Done.
+Start computing 2^36 Delta^33 (x1x2x3x4)^1... Done.
+Start computing 2^37 Delta^34 (x1x2x3x4)^1... Done.
+Start computing 2^38 Delta^35 (x1x2x3x4)^1... Done.
+Start computing aa.
+1 2 3 4 
+*/
+A = \
+[2470971618500769665 + 2360358663958087573*2^64 + 3738897358976885886*2^128 + 1060288165*2^192,5307201562887887912 + 12047988017426504014*2^64 + 3157900426389952228*2^128 + 734543354*2^192,12463630305801090812 + 5581207534063465318*2^64 + 14930312764673654694*2^128 + 713196888*2^192,8442540097335742312 + 10653148094198299953*2^64 + 13681963964108402965*2^128 + 756273517*2^192;\
+5479338210914274570 + 17679583864088792564*2^64 + 9997635938690216397*2^128 + 954097290*2^192,17560467375540078192 + 12349053333013628188*2^64 + 2307172024031320288*2^128 + 258757215*2^192,17447677828717274138 + 3878204321774473644*2^64 + 14310504265848334519*2^128 + 552091904*2^192,16449542636446733296 + 15956197631709465276*2^64 + 17265383203160035523*2^128 + 984067811*2^192;\
+1299039244516655381 + 2575517697811118248*2^64 + 5872715387913578097*2^128 + 499209677*2^192,9328467561820441998 + 1075108356267944069*2^64 + 3985798906856961702*2^128 + 902774770*2^192,2220782260780889114 + 14308908811652888971*2^64 + 16821138148320830880*2^128 + 831847966*2^192,191045260182819036 + 9083390952485902978*2^64 + 4925428426374630093*2^128 + 931873175*2^192;\
+18362361769053233116 + 13923879300779760345*2^64 + 4424744509965564907*2^128 + 945841103*2^192,15281214676636859232 + 17187588114494036465*2^64 + 14693239214215955048*2^128 + 363436062*2^192,8224463173179118376 + 14194876802275396535*2^64 + 16692195677988479173*2^128 + 199393041*2^192,62970552464444916 + 6376781374829304470*2^64 + 7907402192182508130*2^128 + 247752396*2^192]
+/* 
+This should be the matrix of frobenius!
+*/ 
+B = A; 
+/* Freed 2445 lists. */
+The sign is: 1
+The characteristic polynomial is: x^4 + x^3 - 2*x^2 + 4*x + 16
+Its Newton polygon is: [2, 1, 1, 0]
+Its factorization is: Mat([x^4 + x^3 - 2*x^2 + 4*x + 16, 1])
+The valuation of f-g is: 30
+The valuation of subst(g,x,A) is: 30
