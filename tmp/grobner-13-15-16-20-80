@@ -1,0 +1,9 @@
+Coefficient of   x^5 * y^1               = 1
+Coefficient of   x^1 * y^1 * z^2 * w^1   = 1
+Coefficient of   y^4 * w^1               = 1
+Coefficient of   z^5                     = 1
+Coefficient of   w^4                     = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+1 0 1 1 1   5
+1 1 1 1 1   12

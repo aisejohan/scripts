@@ -1,0 +1,16 @@
+Coefficient of   x^6 * y^1 * z^1         = 1
+Coefficient of   x^5 * w^1               = 1
+Coefficient of   x^2 * y^3 * z^2         = 1
+Coefficient of   x^1 * y^2 * z^1 * w^1   = 1
+Coefficient of   y^8                     = 1
+Coefficient of   y^1 * w^2               = 1
+Coefficient of   z^5                     = 1
+Allocate G_len 20 elements and old = 0.
+Allocate M_len = 400 elements.
+Allocate G_len 40 elements and old = 20.
+0 1 0 0 1 1 1   5
+1 1 0 0 1 1 1   5
+0 1 1 0 1 1 1   10
+1 1 1 0 1 1 1   10
+0 1 0 1 1 1 1   9
+1 1 0 1 1 1 1   33
